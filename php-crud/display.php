@@ -40,8 +40,8 @@
                         $sqlSelect = "select * from `crud`";
                         $connectQuery = mysqli_query($connect, $sqlSelect);
 
-                        if($connectQuery) {
-                            while($row = mysqli_fetch_assoc($connectQuery)){
+                        if ($connectQuery) {
+                            while ($row = mysqli_fetch_assoc($connectQuery)) {
                                 $id = $row['id'];
                                 $name = $row['name'];
                                 $email = $row['email'];
@@ -55,9 +55,9 @@
                                         <td>$phone</td>
                                         <td>@$password</td>
                                         <td>
-                                            <a href=\"update.php?updateId=$id\"><button class=\"btn btn-success px-2 mx-2\">Update</button></a>
+                                            <a href=\"update.php?updateId=$id\"><button class=\"btn btn-success mb-2 p-2 mx-2\">Update</button></a>
 
-                                            <a href=\"delete.php?deleteId=$id\"><button class=\"btn btn-danger px-2 mx-2\">Delete</button></a>
+                                            <a href=\"delete.php?deleteId=$id\"><button class=\"btn btn-danger mb-2 p-2 mx-2\">Delete</button></a>
                                         </td>
                                     </tr>";
                             }
