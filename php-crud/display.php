@@ -53,7 +53,7 @@
                                         <td>$name</td>
                                         <td>$email</td>
                                         <td>$phone</td>
-                                        <td>@$password</td>
+                                        <td>$password</td>
                                         <td>
                                             <a href=\"update.php?updateId=$id\"><button class=\"btn btn-success mb-2 p-2 mx-2\">Update</button></a>
 

@@ -1,4 +1,33 @@
-<?php include 'config.php'; ?>
+<?php
+
+include 'config.php'; 
+
+if(isset($_POST['sub'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $roll = $_POST['roll'];
+    $class = $_POST['class'];
+    $section = $_POST['section'];
+    $subject = $_POST['subject1'];
+    $marks = $_POST['marks1'];
+
+    $studentsql = "insert into `studentsInfo` (name, email, roll, class, section) values ('$name', '$email', '$roll', '$class', '$section')";
+    $studentresult = mysqli_query($connect, $studentsql);
+
+    $subjectsql = "insert into `subjects` (subject1) values ('$subject')";
+    $subjectresult = mysqli_query($connect, $subjectsql);
+    
+    $marksql = "insert into `marks` (marks1) values ('$marks')";
+    $markresult = mysqli_query($connect, $marksql);
+
+    if ($studentresult && $subjectresult && $markresult) {
+        mysqli_commit($connect);
+        header("Location: showInfo.php");
+        exit();
+    }
+}
+
+?>
 
 
 <!DOCTYPE html>

@@ -20,7 +20,8 @@ CREATE TABLE studentsInfo (
 -- creating subject table
 CREATE TABLE subjects (
     subject_id INT AUTO_INCREMENT PRIMARY KEY,
-    subject_name VARCHAR(25)
+    subject1 VARCHAR(25),
+    subject1 VARCHAR(25)
 );
 
 -- creating marks table
@@ -28,7 +29,8 @@ CREATE TABLE marks (
     marks_id INT AUTO_INCREMENT PRIMARY KEY,
     student_id INT,
     subject_id INT,
-    marks INT,
+    marks1 INT,
+    marks2 INT,
     FOREIGN key (student_id) REFERENCES studentsInfo (student_id),
     FOREIGN key (subject_id) REFERENCES subjects (subject_id)
 );
