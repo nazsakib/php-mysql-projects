@@ -12,4 +12,6 @@ PHP is a popular server-side scripting language used for creating dynamic web pa
 
 Demonstrates basic CRUD operations (Create, Read, Update, Delete) using PHP and MySQL.
 
+### 2. Students Result System
 
+Add, Update and delete students informations along with their subject wise marks. 
