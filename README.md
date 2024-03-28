@@ -14,4 +14,8 @@ Demonstrates basic CRUD operations (Create, Read, Update, Delete) using PHP and 
 
 ### 2. Students Result System
 
-Add, Update and delete students informations along with their subject wise marks. 
+Add, Update and delete students informations along with their subject wise marks. ( Working )
+
+### 3. Students Grade CRUD
+
+Simple CRUD where students can add, update, and delete their grade along with their degree.
