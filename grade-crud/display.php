@@ -65,7 +65,7 @@
                                                     </svg>
                                                 </button>
                                             </a>
-                                            <a href=\"delete.php?id=$id\" onclick=\" return confirm('Are you sure you want to delete?');\">
+                                            <a href=\"delete.php?id=$id\" onclick=\" return confirm('Are you sure you want to delete $name?');\">
                                                 <button class=\"btn btn-danger\">Delete
                                                     <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\"
                                                 class=\"bi bi-x\" viewBox=\"0 0 16 16\">
