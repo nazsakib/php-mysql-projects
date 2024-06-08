@@ -2,22 +2,25 @@
 
 include 'config.php';
 
+$id = $_GET['updateid'];
+
+$sqlquery = "SELECT * FROM `grade` WHERE id = $id";
+$result = mysqli_query($connect, $sqlquery);
+$row = mysqli_fetch_assoc($result);
 
 if (isset($_POST['submitresult'])) {
-    $name = trim($_POST['name']);
-    $email = trim($_POST['email']);
-    $degree = trim($_POST['degree']);
-    $cgpa = trim($_POST['cgpa']);
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $degree = $_POST['degree'];
+    $cgpa = $_POST['cgpa'];
 
-    if (!empty($name) && !empty($email) && !empty($degree) && !empty($cgpa)) {
 
-        $sqlquery = "INSERT INTO `grade` (name, email, degree, cgpa) VALUES ('$name', '$email', '$degree', '$cgpa')";
-        $result = mysqli_query($connect, $sqlquery);
+    $sqlquery = "UPDATE `grade` SET id=$id, name = '$name', email = '$email', degree = '$degree', cgpa = '$cgpa'";
+    $result = mysqli_query($connect, $sqlquery);
 
-        if ($result) {
-            header("location: display.php");
-            exit;
-        }
+    if ($result) {
+        header("location: display.php");
+        exit;
     }
 }
 

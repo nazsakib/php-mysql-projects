@@ -2,7 +2,8 @@
 
 include 'config.php';
 
-function hashPassword($password) {
+function hashPassword($password)
+{
     return password_hash($password, PASSWORD_DEFAULT);
 }
 
@@ -17,10 +18,10 @@ $email = $row['email'];
 $phone = $row['phone'];
 $password = $row['password'];
 
-if(isset($_POST['sub'])) {
+if (isset($_POST['sub'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
-    $phone = $_POST['phone']; 
+    $phone = $_POST['phone'];
     $password = hashPassword($_POST['password']);
 
     $sql = "update `crud` set id = $id, name = '$name', email = '$email', phone = '$phone', password = '$password' where id = $id";
@@ -31,7 +32,7 @@ if(isset($_POST['sub'])) {
         header("Location: display.php");
         exit();
     }
-    
+
 }
 
 
@@ -60,8 +61,8 @@ if(isset($_POST['sub'])) {
             <form id="myForm" method="post">
                 <div class="mb-3">
                     <label>Name</label>
-                    <input class="form-control" type="text" name="name" placeholder="Enter your name"
-                        autocomplete="off" value="<?php echo $name; ?>">
+                    <input class="form-control" type="text" name="name" placeholder="Enter your name" autocomplete="off"
+                        value="<?php echo $name; ?>">
                 </div>
                 <div class="mb-3">
                     <label>Email</label>
@@ -70,7 +71,8 @@ if(isset($_POST['sub'])) {
                 </div>
                 <div class="mb-3">
                     <label>Phone Number</label>
-                    <input class="form-control" type="text" name="phone" placeholder="Phone Number" autocomplete="off" value="<?php echo $phone; ?>">
+                    <input class="form-control" type="text" name="phone" placeholder="Phone Number" autocomplete="off"
+                        value="<?php echo $phone; ?>">
                 </div>
                 <div class="mb-3">
                     <label>Password</label>
