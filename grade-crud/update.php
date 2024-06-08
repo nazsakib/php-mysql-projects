@@ -2,7 +2,7 @@
 
 include 'config.php';
 
-$id = $_GET['updateid'];
+$id = $_GET['updateid']; // updateid added
 
 $sqlquery = "SELECT * FROM `grade` WHERE id = $id";
 $result = mysqli_query($connect, $sqlquery);
