@@ -21,3 +21,6 @@ Add, Update and delete students informations along with their subject wise marks
 ### 3. Students Grade CRUD
 
 Simple CRUD where students can add, update, and delete their grade along with their degree.
+
+#### Next feature:
+- Implement a real time chart/graph based on students CGPA or address or degree
